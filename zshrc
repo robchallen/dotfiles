@@ -83,7 +83,7 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source $HOME/.bash_aliases
+source $HOME/.aliases
 source $HOME/.profile
 
 setopt SHARE_HISTORY
