@@ -1,0 +1,15 @@
+# Screen config
+# alias standingScreen='xrandr --fb 1080x1920 --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --rotate left --panning 1080x1920+0+0'
+# alias standingScreen='xrandr --fb 1296x2304 --output DVI-D-0 --off --output HDMI-0 --scale 1.2x1.2 --mode 1920x1080 --rotate left --panning 1296x2304+0+0'
+# alias standingScreen='xrandr --fb 1440x2560 --output DVI-D-0 --off --output HDMI-0 --scale 1.333x1.333 --mode 1920x1080 --rotate left --panning 1440x2560+0+0'
+
+alias standingScreen='xrandr --fb 1620x2880 --output DVI-D-0 --off --output HDMI-0 --scale 1.5x1.5 --mode 1920x1080 --rotate left --panning 1620x2880+0+0'
+# alias sittingScreen='xrandr --fb 3840x2160 --output DVI-D-0 --scale 1x1 --mode 3840x2160 --panning 3840x2160+0+0  --output HDMI-0 --off'
+alias dualScreen='xrandr --fb 3840x2880 --output DVI-D-0 --scale 1x1 --mode 3840x2160 --panning 3840x2880+0+0 --output HDMI-0 --scale 1.5x1.5 --mode 1920x1080 --rotate left --panning 3840x2880+0+0'
+alias shareScreen='xrandr --fb 1920x1080 --output DVI-D-0 --scale 1x1 --mode 1920x1080 --panning 1920x1080+0+0  --output HDMI-0 --off'
+alias sittingScreen='xrandr --fb 2560x1440 --output DVI-D-0 --scale 1x1 --mode 2560x1440 --panning 2560x1440+0+0  --output HDMI-0 --off'
+
+# alias mc='. /usr/share/mc/bin/mc-wrapper.sh'
+
+alias news='newsbeuter -r -C ~/.newsbeuter/config'
+alias vnc='x11vnc -create -geometry 1280x800'
