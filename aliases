@@ -13,3 +13,10 @@ alias sittingScreen='xrandr --fb 2560x1440 --output DVI-D-0 --scale 1x1 --mode 2
 
 alias news='newsbeuter -r -C ~/.newsbeuter/config'
 alias vnc='x11vnc -create -geometry 1280x800'
+
+# now `cclip' can be used when you it to be available to `ctrl-[vxc]'
+alias cclip='xclip -selection clipboard'
+
+# google drive mount
+alias gmount='google-drive-ocamlfuse ~/Documents/Drive'
+alias gumount='fusermount -u ~/Documents/Drive'
