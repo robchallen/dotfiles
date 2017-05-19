@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cp -R ~/.dotfiles/icons /opt/google
+
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 ln -s ~/.dotfiles/bashrc ~/.bashrc
 ln -s ~/.dotfiles/screenrc ~/.screenrc
