@@ -1,0 +1,35 @@
+#!/bin/bash
+
+function HDMIActive {
+	if xrandr | grep "^HDMI" | grep "+0+0" > /dev/null
+		then return 0; else return 1; 
+	fi
+}
+
+function DVIActive {
+	if xrandr | grep "^DVI" | grep "+0+0" > /dev/null
+		then return 0; else return 1; 
+	fi
+}
+
+function Switch {
+	if HDMIActive
+	then
+		xrandr --fb 2560x1440 --output DVI-D-0 --scale 1x1 --mode 2560x1440 --panning 2560x1440+0+0  --output HDMI-0 --off
+		echo "switching to DVI"
+	else
+		if DVIActive
+		then
+			xrandr --fb 1620x2880 --output DVI-D-0 --off --output HDMI-0 --scale 1.5x1.5 --mode 1920x1080 --rotate left --panning 1620x2880+0+0
+		fi
+		echo "switching to HDMI"
+	fi
+}
+
+
+if pstree -p | egrep --quiet --extended-regexp ".*sshd.*\($$\)";
+then
+	echo "not possible over remote login"
+else
+	Switch;
+fi

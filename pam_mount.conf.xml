@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE pam_mount SYSTEM "pam_mount.conf.xml.dtd">
+<!--
+	See pam_mount.conf(5) for a description.
+-->
+
+<pam_mount>
+
+		<!-- Volume definitions -->
+
+		<volume fstype="fuse" path="gdfuse#default" mountpoint="~/Documents/Drive" options="nosuid,nodev" />
+
+</pam_mount>

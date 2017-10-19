@@ -88,5 +88,15 @@ source $HOME/.profile
 
 setopt SHARE_HISTORY
 setopt APPEND_HISTORY
+setopt NO_BEEP
+setopt AUTO_LIST
 
-if [ -z "$STY" ]; then screen -xRR; fi
+if [ -z "$STY" ]; 
+then
+	if (screen -ls | grep "No Sockets" >> /dev/null ); 
+	then
+		screen;
+	else
+		screen -xA;
+	fi
+fi
